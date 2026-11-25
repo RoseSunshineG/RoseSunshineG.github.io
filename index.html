@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rosemarie García · Product Owner & Product Ops</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/favicon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="description" content="Portfolio of Rosemarie García: Product Owner and UX designer. Case studies, AI prototypes and learning games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,400&family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#F6F2EA; --paper:#FFFDF8; --ink:#0B3C49; --muted:#3E5F68; --line:#EFE6D6;
+  --accent:#0F7470; --accent-soft:#FADDE5; --teal:#0F7470; --teal-soft:#CFEFEA; --sun:#F2B33D; --sun-soft:#FBE8BF; --tq:#2EC4B6; --rose:#F4B6C6;
+  --serif:"Fraunces",Georgia,serif; --display:"Manrope",system-ui,sans-serif; --body:"Manrope",system-ui,-apple-system,sans-serif;
+  --r:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--body);
+  padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+a{color:inherit}
+img{max-width:100%;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+/* nav */
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:36px;height:36px;border-radius:9px}
+.logo b{display:block;font:800 13px var(--body);letter-spacing:.22em;color:var(--ink)}
+.logo small{display:block;font:700 9px var(--body);letter-spacing:.22em;color:var(--muted)}
+.links{display:flex;gap:22px;font-size:14px;font-weight:500}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+.langs{display:flex;gap:3px;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:3px}
+.langs button{font:600 12px var(--body);letter-spacing:.05em;border:0;background:none;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--ink);color:#FFFDF8}
+/* hero */
+.hero{padding:72px 0 56px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+h1{font:800 clamp(40px,7vw,76px)/1 var(--display);letter-spacing:-.025em;margin:0 0 22px;max-width:17ch;text-wrap:balance}
+h1 em,h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--teal);letter-spacing:-.01em}
+.lede{font-size:clamp(17px,2vw,19px);color:var(--muted);max-width:60ch;margin:0 0 28px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+.chip{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500}
+.chip b{color:var(--teal)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font:700 13px var(--body);letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-radius:999px;padding:13px 22px;border:1.5px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn:hover{transform:translateY(-1px)}
+/* sections */
+section{padding:56px 0}
+.shead{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+h2{font:800 clamp(30px,4.6vw,52px)/1.02 var(--display);letter-spacing:-.025em;margin:0}
+.shead p{margin:0;color:var(--muted);max-width:52ch}
+/* case study */
+.case{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:26px;
+  display:grid;grid-template-columns:1.05fr 1fr}
+.case .media{background:var(--c-soft,var(--teal-soft));padding:28px;display:flex;align-items:center;justify-content:center;min-height:300px}
+.case .body{padding:32px 32px 28px;display:flex;flex-direction:column;gap:14px}
+.tag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);
+  background:var(--c-soft,var(--teal-soft));padding:5px 12px;border-radius:999px}
+.case h3{font:800 28px/1.15 var(--display);margin:0;letter-spacing:-.015em}
+.meta{font-size:14px;color:var(--muted);margin:-6px 0 0}
+.case p{margin:0}
+dl.facts{margin:4px 0 0;display:grid;gap:10px}
+dl.facts div{display:grid;grid-template-columns:96px 1fr;gap:12px}
+dt{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:3px}
+dd{margin:0;font-size:15px}
+.insight{border-left:4px solid var(--c,var(--teal));background:var(--bg);padding:12px 16px;border-radius:0 10px 10px 0;font-size:15px}
+.insight b{color:var(--c,var(--teal))}
+.foot{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:auto;padding-top:6px}
+.foot .btn{padding:9px 16px;font-size:14px}
+.built{font-size:13px;color:var(--muted)}
+.beta{margin-top:18px;padding:16px 18px;border:1.5px dashed var(--teal);border-radius:20px;background:var(--paper)}
+.beta p{margin:0 0 12px;font-size:15px}
+.pill{display:inline-block;font:800 11px var(--body);letter-spacing:.1em;text-transform:uppercase;background:var(--sun-soft);color:var(--ink);padding:4px 10px;border-radius:999px}
+.beta-btns{display:flex;flex-wrap:wrap;gap:10px}
+.beta .btn{padding:10px 16px;font-size:12.5px}
+.built b{color:var(--ink)}
+.note{font-size:13px;color:var(--muted);font-style:italic}
+/* media pieces */
+.phones{display:flex;gap:14px;align-items:flex-end}
+.phone{width:clamp(96px,13vw,150px);border-radius:20px;border:6px solid #111;overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.18);background:#111}
+.phone:nth-child(2){transform:translateY(-18px)}
+.shot{border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.14);border:1px solid rgba(0,0,0,.06)}
+/* device mockups */
+.stage{position:relative;display:flex;align-items:center;justify-content:center;width:100%;padding:18px 0 8px}
+.device{position:relative;width:clamp(92px,13.5vw,168px);aspect-ratio:9/19.3;border-radius:clamp(16px,2.2vw,28px);background:#121417;padding:clamp(4px,.55vw,7px);
+  box-shadow:0 1px 0 1px rgba(255,255,255,.08) inset,0 22px 40px -12px rgba(30,20,10,.35),0 8px 16px -8px rgba(30,20,10,.25);flex:none}
+.device::before{content:"";position:absolute;top:clamp(7px,.9vw,11px);left:50%;transform:translateX(-50%);width:28%;height:clamp(5px,.6vw,8px);border-radius:999px;background:#121417;z-index:2}
+.device .scr{width:100%;height:100%;border-radius:clamp(12px,1.7vw,22px);overflow:hidden;background:#fff;position:relative}
+.device img{width:100%;height:100%;object-fit:cover;object-position:top}
+.device.dside{width:clamp(80px,11.5vw,144px);opacity:.97}
+.device.l{transform:rotate(-6deg) translate(18%,6%);z-index:1}
+.device.r{transform:rotate(6deg) translate(-18%,6%);z-index:1}
+.device.c{z-index:2}
+.blob{position:absolute;inset:8% 10%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.75),transparent);z-index:0}
+.float{position:absolute;z-index:3;background:#fff;border-radius:12px;padding:8px 12px;font-size:12px;font-weight:600;box-shadow:0 10px 24px -8px rgba(0,0,0,.25);max-width:46%;line-height:1.3}
+.float small{display:block;font-weight:500;color:var(--muted);font-size:11px}
+.float.tl{top:4%;left:0}.float.br{bottom:4%;right:0}.float.bl{bottom:4%;left:0}.float.ml{top:16%;left:0}
+.device.solo{width:clamp(150px,19vw,214px)}
+.float b{color:var(--c)}
+/* mini UI recreations */
+.ui{height:100%;display:flex;flex-direction:column;font-family:var(--body);font-size:8.5px;line-height:1.25;color:#1f2d2a}
+.ui .hdr{padding:22px 9px 4px;font-weight:700;font-size:10px}
+.vvui{background:#FBF7F2}
+.vvui h6{font:800 13px/1.1 var(--display);margin:0;color:var(--ink)}
+.vvui .sub{color:var(--muted);font-size:7.5px;margin-top:3px}
+.vvui .steps{display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:6px 8px}
+.vvui .steps span{background:#fff;border:1px solid var(--line);border-radius:5px;padding:3px 4px;font-size:7.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vvui .steps span.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.vvui .q{margin:4px 8px;font-weight:700;font-size:8.5px}
+.vvui .opts{display:flex;flex-wrap:wrap;gap:3px;padding:0 8px}
+.vvui .opts span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 6px;font-size:7px}
+.vvui .opts span.on{border-color:var(--accent);color:var(--accent);font-weight:700}
+.vvui .micbig{margin:10px auto 4px;width:44px;height:44px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#fff;font-size:18px;box-shadow:0 0 0 7px var(--accent-soft)}
+.vvui .hint{text-align:center;color:var(--muted);font-size:7px}
+.vvui .go{margin:auto 8px 10px;background:var(--ink);color:#fff;border-radius:8px;text-align:center;padding:6px;font-weight:700;font-size:8px}
+/* game cards mock */
+.gmock{border-radius:14px;overflow:hidden;border:1px solid var(--line);height:170px;position:relative;font-family:var(--body)}
+.tren{background:#eef5f1;padding:10px;display:flex;flex-direction:column;gap:7px}
+.track{height:38px;background:#fff;border:2px solid #cfded8;border-radius:10px;position:relative;overflow:hidden}
+.track::after{content:"";position:absolute;left:6px;right:6px;bottom:7px;height:5px;background:repeating-linear-gradient(90deg,#7a5a3c 0 3px,transparent 3px 10px);border-top:2px solid #7a5a3c}
+.track .tr{position:absolute;bottom:10px;left:38%;font-size:20px;line-height:1}
+.track .st{position:absolute;right:8px;top:4px;font-size:8px;font-weight:700;color:#5d6f6a}
+.qcard{background:#fff;border:2px solid #cfded8;border-radius:10px;text-align:center;padding:5px;font-weight:700;font-size:13px}
+.qcard small{display:block;font-size:8px;font-weight:600;color:#5d6f6a;letter-spacing:.1em}
+.ans4{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.ans4 span{border:2px solid var(--k);border-radius:8px;text-align:center;font-size:9px;font-weight:700;padding:4px 2px;background:#fff}
+.ans4 span.ok{background:#2e9e5b;border-color:#2e9e5b;color:#fff}
+.vag{background:#f3efe6;padding:9px;display:flex;flex-direction:column;gap:5px}
+.plat{display:flex;align-items:center;gap:5px;background:#fff;border:2px solid #d9d2c3;border-radius:8px;padding:4px 6px}
+.plat .loco{width:20px;height:13px;border-radius:3px 5px 2px 2px;background:var(--k);flex:none}
+.plat .w{border:1.5px dashed var(--k);border-radius:4px;font-size:7.5px;font-weight:700;padding:1px 5px;color:#66716d}
+.plat .w.f{border-style:solid;background:var(--k);color:#fff}
+.crates{display:flex;gap:5px;justify-content:center;background:#e7dfcf;border-radius:8px;padding:5px}
+.crates span{background:#fff;border:2px solid #26302d;border-radius:6px;font-size:8px;font-weight:700;padding:3px 6px;box-shadow:0 2px 0 #26302d}
+.crates span.sel{background:#e4572e;border-color:#e4572e;color:#fff;box-shadow:0 2px 0 #9a3a1e;transform:rotate(-5deg)}
+.eng{background:#fffaf0;padding:10px;display:flex;flex-direction:column;gap:8px;align-items:center}
+.eng .top{display:flex;justify-content:space-between;width:100%;font-size:9px;font-weight:700}
+.eng .top b{color:#e7a400}
+.seq{display:flex;gap:5px}
+.seq span{width:30px;height:34px;border-radius:8px;background:#fff;border:2px solid #d6cbe8;display:grid;place-items:center;font-size:16px;font-weight:700;color:#5b3f9a}
+.seq span.gap{border-style:dashed;color:#c9bfe0}
+.listen{display:flex;gap:5px}
+.listen span{background:#3b82f6;color:#fff;border-radius:999px;font-size:9px;font-weight:700;padding:4px 10px}
+.listen span.slow{background:#e8eefc;color:#3b82f6}
+.opts4{display:flex;gap:5px}
+.opts4 span{width:30px;height:28px;border-radius:7px;border:2px solid #cfd8e3;background:#fff;display:grid;place-items:center;font-weight:700;font-size:13px}
+.opts4 span.ok{background:#2e9e5b;border-color:#2e9e5b;color:#fff}
+/* Mataró mock */
+.mtr{background:#F3F5F7;height:220px;border-radius:14px;border:1px solid var(--line);overflow:hidden;padding:12px;display:flex;flex-direction:column;gap:7px;font-family:var(--body)}
+.mtr .bdg{align-self:flex-start;font-size:8px;font-weight:700;letter-spacing:.08em;background:#F2B705;color:#4A3600;padding:2px 6px;border-radius:3px}
+.mtr .big{font:800 26px/0.9 "Arial Narrow",Impact,sans-serif;text-transform:uppercase;letter-spacing:.01em;color:#13212E}
+.mtr .big span{color:#0A5A9C}
+.mtr .fl{display:flex;gap:4px;flex-wrap:wrap}
+.mtr .fl span{font-size:8.5px;font-weight:600;border:1px solid #DCE3E9;background:#fff;border-radius:999px;padding:2px 8px;color:#5B6B79}
+.mtr .fl span.on{background:#13212E;color:#fff;border-color:#13212E}
+.ev{display:flex;gap:7px;background:#fff;border:1px solid #DCE3E9;border-radius:8px;padding:6px}
+.ev .d{width:32px;flex:none;border-radius:5px;background:#E3EEF8;color:#0A5A9C;text-align:center;font-weight:800;font-size:13px;line-height:1;padding:4px 0}
+.ev .d small{display:block;font-size:7px;font-weight:700}
+.ev b{display:block;font-size:10px}
+.ev em{font-style:normal;font-size:8px;color:#5B6B79}
+.ev .free{font-size:7.5px;font-weight:700;background:#E2F3EA;color:#1F7A4D;border-radius:4px;padding:1px 5px;margin-left:4px}
+/* Viva Voz illustration */
+.vv{width:100%;max-width:360px;display:flex;flex-direction:column;gap:14px}
+.bubble{background:#fff;border-radius:16px;padding:14px 16px;box-shadow:0 6px 18px rgba(0,0,0,.08);font-size:14px}
+.bubble.me{align-self:flex-end;background:var(--teal);color:#fff;border-bottom-right-radius:4px;max-width:85%}
+.mic{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px}
+.mic i{width:40px;height:40px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px;flex:none}
+.wave{display:flex;gap:3px;align-items:center;height:22px}
+.wave span{width:3px;border-radius:2px;background:var(--accent);opacity:.7}
+.bubble.me .mic i{background:#fff;color:var(--accent)}
+.bubble.me .wave span{background:#fff;opacity:.9}
+.langcloud{display:flex;flex-wrap:wrap;gap:6px}
+.langcloud span{font-size:12px;font-weight:600;background:#fff;border:1px solid var(--line);padding:3px 9px;border-radius:999px}
+.cvcard{background:#fff;border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(0,0,0,.08);display:grid;gap:6px}
+.cvcard .l{height:8px;border-radius:4px;background:var(--line)}
+.cvcard .row{display:flex;gap:6px}
+.cvcard .pill{font-size:11px;font-weight:700;padding:2px 8px;border-radius:6px;background:var(--teal-soft);color:var(--teal)}
+/* games */
+.story{background:var(--ink);color:var(--paper);border-radius:var(--r);padding:34px;display:grid;grid-template-columns:1.1fr 1fr;gap:34px;margin-bottom:22px}
+.story h3{font:800 30px/1.15 var(--display);margin:0 0 12px}
+.story p{margin:0 0 12px;color:#D4DBDD}
+.quote{font:italic 400 26px/1.3 var(--serif);color:var(--tq);margin:6px 0 12px}
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.timeline li{display:grid;grid-template-columns:28px 1fr;gap:12px}
+.timeline .n{width:28px;height:28px;border-radius:50%;background:var(--tq);color:var(--ink);display:grid;place-items:center;font-weight:700;font-size:13px}
+.timeline b{display:block;color:#fff}
+.timeline span{font-size:14px;color:#B9C3C6}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.game{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:10px}
+.game .ico{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;font-size:28px;background:var(--g)}
+.game h4{font:800 20px/1.2 var(--display);margin:0}
+.game p{margin:0;font-size:15px;color:var(--muted)}
+.game ul{margin:0;padding-left:18px;font-size:14px}
+.game .foot .btn{border-color:var(--ink)}
+.disclaimer{margin-top:18px;font-size:14px;color:var(--muted);text-align:center}
+.disclaimer b{color:var(--ink)}
+/* side projects */
+.comm .side h4{font-size:19px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.side{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:10px}
+.side h4{font:800 22px/1.2 var(--display);margin:0}
+.side p{margin:0;color:var(--muted);font-size:15px}
+.status{align-self:flex-start;font-size:12px;font-weight:700;padding:4px 12px;border-radius:999px;background:#FADDE5;color:var(--ink)}
+.status.ok{background:var(--teal-soft);color:var(--ink)}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.about p{margin:0 0 14px}
+.xp{list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.xp li{border-left:3px solid var(--line);padding-left:16px}
+.xp b{display:block}
+.xp span{font-size:14px;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.langbars{display:grid;gap:8px;margin-top:6px}
+.langbars div{display:flex;justify-content:space-between;font-size:15px;border-bottom:1px dashed var(--line);padding-bottom:6px}
+.langbars span{color:var(--muted)}
+h5{font:700 12px var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin:26px 0 10px}
+/* contact */
+.contact{background:var(--ink);color:#FFFDF8;border-radius:var(--r);padding:44px 34px;text-align:center}
+.contact h2{color:#FFFDF8;margin-bottom:10px}
+.contact h2 em{color:var(--tq)}
+.contact p{margin:0 auto 24px;max-width:52ch;opacity:.92}
+.contact .btn{border-color:#FFFDF8;color:#FFFDF8}
+.contact .btn.primary{background:var(--tq);border-color:var(--tq);color:var(--ink)}
+.mail{display:block;margin-top:14px;font-weight:600}
+footer{padding:28px 0 40px;text-align:center;font-size:13px;color:var(--muted)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+@media (max-width:820px){
+  .logo small{display:none}
+  .logo b{font-size:11px;letter-spacing:.14em}
+  .float{font-size:10px;padding:6px 8px;max-width:40%}
+  .float small{display:none}
+  .float.ml{top:auto;bottom:4%;left:0}
+  .stage{padding:14px 0 30px}
+  .links{display:none}
+  .case,.story,.about,.grid2{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .case .media{min-height:240px}
+  .case .body{padding:24px 22px}
+  dl.facts div{grid-template-columns:1fr;gap:2px}
+  .story{padding:26px 22px}
+  .hero{padding:44px 0 36px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="img/favicon-192.png" alt=""><span><b>ROSEMARIE GARCÍA</b><small>PRODUCT OWNER &amp; PRODUCT OPS</small></span></a>
+    <nav class="links" aria-label="Sections">
+      <a href="#work" data-i="nav_work"></a>
+      <a href="#games" data-i="nav_games"></a>
+      <a href="#community" data-i="nav_comm"></a>
+      <a href="#about" data-i="nav_about"></a>
+      <a href="#contact" data-i="nav_contact"></a>
+    </nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button data-l="en">EN</button><button data-l="fr">FR</button><button data-l="ca">CA</button><button data-l="es">ES</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="eyebrow" data-i="hero_eyebrow"></p>
+    <h1 data-i="hero_h1"></h1>
+    <p class="lede" data-i="hero_lede"></p>
+    <div class="chips">
+      <span class="chip" data-i="chip1"></span>
+      <span class="chip" data-i="chip2"></span>
+      <span class="chip" data-i="chip3"></span>
+      <span class="chip" data-i="chip4"></span>
+      <span class="chip" data-i="chip5"></span>
+    </div>
+    <div class="ctas">
+      <a class="btn primary" href="#work" data-i="cta_work"></a>
+      <a class="btn" href="#contact" data-i="cta_contact"></a>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="work">
+    <div class="shead">
+      <h2 data-i="work_h"></h2>
+      <p data-i="work_p"></p>
+    </div>
+
+    <!-- Viva Voz -->
+    <article class="case" style="--c:var(--teal);--c-soft:#FADDE5">
+      <div class="media" aria-hidden="true">
+        <div class="stage">
+          <div class="device c solo"><div class="scr"><div class="ui vvui">
+            <div class="hdr"><h6>CV de Viva Voz</h6><div class="sub" data-i="vv_m_sub"></div></div>
+            <div class="steps"><span class="on" data-i="vv_m_s1"></span><span data-i="vv_m_s2"></span><span data-i="vv_m_s3"></span><span data-i="vv_m_s4"></span></div>
+            <div class="q" data-i="vv_m_q"></div>
+            <div class="opts"><span>Español</span><span>Català</span><span class="on">العربية</span><span>Wolof</span><span>Bambara</span><span>Українська</span><span>Français</span><span>+24</span></div>
+            <div class="micbig">🎙</div>
+            <div class="hint" data-i="vv_m_hint"></div>
+            <div class="go" data-i="vv_m_go"></div>
+          </div></div></div>
+          <div class="float ml" data-i="vv_q"></div>
+          <div class="float br"><span style="display:flex;gap:4px;flex-wrap:wrap"><span class="pill" style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:var(--teal-soft);color:var(--teal)">CV · ATS</span><span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:var(--teal-soft);color:var(--teal)">CV · Visual</span></span><small style="margin-top:4px">Castellano · Català · PDF</small></div>
+        </div>
+      </div>
+      <div class="body">
+        <span class="tag" data-i="vv_tag"></span>
+        <h3>CV de Viva Voz</h3>
+        <p class="meta" data-i="vv_meta"></p>
+        <p data-i="vv_intro"></p>
+        <dl class="facts">
+          <div><dt data-i="l_problem"></dt><dd data-i="vv_problem"></dd></div>
+          <div><dt data-i="l_solution"></dt><dd data-i="vv_solution"></dd></div>
+          <div><dt data-i="l_decisions"></dt><dd data-i="vv_decisions"></dd></div>
+          <div><dt data-i="l_role"></dt><dd data-i="vv_role"></dd></div>
+        </dl>
+        <div class="insight" data-i="vv_insight"></div>
+        <div class="beta">
+          <p><span class="pill" data-i="vv_beta_tag"></span> <span data-i="vv_beta_txt"></span></p>
+          <div class="beta-btns">
+            <a class="btn primary" href="https://cvdevivavoz.lovable.app/?perfil=persona&amp;ref=portfolio" target="_blank" rel="noopener" data-i="vv_try_p"></a>
+            <a class="btn" href="https://cvdevivavoz.lovable.app/?perfil=tecnico&amp;ref=portfolio" target="_blank" rel="noopener" data-i="vv_try_t"></a>
+          </div>
+        </div>
+        <div class="foot">
+          <span class="built" data-i="vv_built"></span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Keluo -->
+    <article class="case" style="--c:var(--teal);--c-soft:#CFEFEA">
+      <div class="media">
+        <div class="stage">
+          <div class="blob"></div>
+          <div class="device dside l"><div class="scr"><img src="img/keluo-monitor.jpg" alt="Keluo: trainer profile with photo and reviews" loading="lazy"></div></div>
+          <div class="device c"><div class="scr"><img src="img/keluo-home.jpg" alt="Keluo: home screen" loading="lazy"></div></div>
+          <div class="device dside r"><div class="scr"><img src="img/keluo-espera.jpg" alt="Keluo: waiting list when a class is full" loading="lazy"></div></div>
+          <div class="float bl"><b>20% → </b><span data-i="ke_f1"></span><small data-i="ke_f1s"></small></div>
+        </div>
+      </div>
+      <div class="body">
+        <span class="tag" data-i="ke_tag"></span>
+        <h3 data-i="ke_title"></h3>
+        <p class="meta">Keluo Tech Consulting · 2023–2024</p>
+        <dl class="facts">
+          <div><dt data-i="l_role"></dt><dd data-i="ke_role"></dd></div>
+          <div><dt data-i="l_problem"></dt><dd data-i="ke_problem"></dd></div>
+          <div><dt data-i="l_process"></dt><dd data-i="ke_process"></dd></div>
+          <div><dt data-i="l_outcome"></dt><dd data-i="ke_outcome"></dd></div>
+        </dl>
+        <div class="insight" data-i="ke_insight"></div>
+        <p class="note" data-i="ke_note"></p>
+      </div>
+    </article>
+
+    <!-- CoffeMap -->
+    <article class="case" style="--c:var(--teal);--c-soft:#FBE8BF">
+      <div class="media">
+        <div class="stage">
+          <div class="blob"></div>
+          <div class="device dside l"><div class="scr"><img src="img/coffemap-cafeterias.jpg" alt="CoffeMap: coffee shops nearby" loading="lazy"></div></div>
+          <div class="device c"><div class="scr"><img src="img/coffemap-pedidos.jpg" alt="CoffeMap: orders" loading="lazy"></div></div>
+          <div class="device dside r"><div class="scr"><img src="img/coffemap-favoritos.jpg" alt="CoffeMap: favourites" loading="lazy"></div></div>
+          <div class="float br"><b>7/10</b> <span data-i="cm_f1"></span><small data-i="cm_f1s"></small></div>
+        </div>
+      </div>
+      <div class="body">
+        <span class="tag" data-i="cm_tag"></span>
+        <h3>CoffeMap</h3>
+        <p class="meta" data-i="cm_meta"></p>
+        <dl class="facts">
+          <div><dt data-i="l_problem"></dt><dd data-i="cm_problem"></dd></div>
+          <div><dt data-i="l_process"></dt><dd data-i="cm_process"></dd></div>
+          <div><dt data-i="l_outcome"></dt><dd data-i="cm_outcome"></dd></div>
+        </dl>
+        <div class="insight" data-i="cm_insight"></div>
+        <div class="foot">
+          <a class="btn" href="https://www.figma.com/proto/YYgb8slevbOkSLkxRYAYQ7/Prototipo-funcional-final?node-id=153%3A4204&scaling=scale-down&page-id=0%3A1&starting-point-node-id=153%3A4191" target="_blank" rel="noopener" data-i="cm_btn"></a>
+        </div>
+      </div>
+    </article>
+
+    <!-- EscolApp -->
+    <article class="case" style="--c:var(--teal);--c-soft:#EFE6D6">
+      <div class="media">
+        <div class="stage">
+          <div class="blob"></div>
+          <div class="device dside l"><div class="scr"><img src="img/escolapp-calendario.jpg" alt="EscolApp: activity calendar" loading="lazy"></div></div>
+          <div class="device c"><div class="scr"><img src="img/escolapp-alumno.jpg" alt="EscolApp: student dashboard" loading="lazy"></div></div>
+          <div class="device dside r"><div class="scr"><img src="img/escolapp-mensajes.jpg" alt="EscolApp: messages with tutors" loading="lazy"></div></div>
+          <div class="float br"><b>96%</b> <span data-i="ea_f1"></span></div>
+        </div>
+      </div>
+      <div class="body">
+        <span class="tag" data-i="ea_tag"></span>
+        <h3>EscolApp</h3>
+        <p class="meta" data-i="ea_meta"></p>
+        <dl class="facts">
+          <div><dt data-i="l_problem"></dt><dd data-i="ea_problem"></dd></div>
+          <div><dt data-i="l_research"></dt><dd data-i="ea_research"></dd></div>
+          <div><dt data-i="l_strategy"></dt><dd data-i="ea_strategy"></dd></div>
+        </dl>
+        <div class="insight" data-i="ea_insight"></div>
+      </div>
+    </article>
+  </section>
+
+  <!-- GAMES -->
+  <section id="games">
+    <div class="shead">
+      <h2 data-i="g_h"></h2>
+      <p data-i="g_p"></p>
+    </div>
+
+    <div class="story">
+      <div>
+        <h3 data-i="g_story_h"></h3>
+        <p data-i="g_story_p1"></p>
+        <p class="quote" data-i="g_quote"></p>
+        <p data-i="g_story_p2"></p>
+      </div>
+      <ol class="timeline">
+        <li><span class="n">1</span><div><b data-i="g_t1"></b><span data-i="g_t1d"></span></div></li>
+        <li><span class="n">2</span><div><b data-i="g_t2"></b><span data-i="g_t2d"></span></div></li>
+        <li><span class="n">3</span><div><b data-i="g_t3"></b><span data-i="g_t3d"></span></div></li>
+        <li><span class="n">4</span><div><b data-i="g_t4"></b><span data-i="g_t4d"></span></div></li>
+      </ol>
+    </div>
+
+    <div class="grid3">
+      <article class="game" style="--g:#E3ECFB">
+        <div class="gmock tren" aria-hidden="true">
+          <div class="track"><span class="tr">🚂</span><span class="st">★ 7</span></div>
+          <div class="qcard"><small>SÍMBOL</small>Creu</div>
+          <div class="ans4"><span style="--k:#2f6fd6">Judaisme</span><span class="ok" style="--k:#8a4fbf">Cristianisme</span><span style="--k:#1f9a6b">Islam</span><span style="--k:#e98a15">Hinduisme</span></div>
+        </div>
+        <h4>El Tren de les Religions</h4>
+        <p data-i="g1_p"></p>
+        <ul><li data-i="g1_a"></li><li data-i="g1_b"></li></ul>
+        <div class="foot"><a class="btn" href="https://rosesunshineg.github.io/juegos-repaso/religiones.html" target="_blank" rel="noopener" data-i="play"></a></div>
+      </article>
+      <article class="game" style="--g:#FBEBDD">
+        <div class="gmock vag" aria-hidden="true">
+          <div class="plat" style="--k:#2f6fd6"><span class="loco"></span><span class="w f">Torà</span><span class="w">&nbsp;&nbsp;&nbsp;</span></div>
+          <div class="plat" style="--k:#1f9a6b"><span class="loco"></span><span class="w f">Mesquita</span><span class="w">&nbsp;&nbsp;&nbsp;</span></div>
+          <div class="plat" style="--k:#c9a20e"><span class="loco"></span><span class="w">&nbsp;&nbsp;&nbsp;</span><span class="w">&nbsp;&nbsp;&nbsp;</span></div>
+          <div class="crates"><span class="sel">Buda</span><span>Bíblia</span><span>Diwali</span></div>
+        </div>
+        <h4>Carrega els Vagons</h4>
+        <p data-i="g2_p"></p>
+        <ul><li data-i="g2_a"></li><li data-i="g2_b"></li></ul>
+        <div class="foot"><a class="btn" href="https://rosesunshineg.github.io/juegos-repaso/vagones.html" target="_blank" rel="noopener" data-i="play"></a></div>
+      </article>
+      <article class="game" style="--g:#E2F2E8">
+        <div class="gmock eng" aria-hidden="true">
+          <div class="top"><span>Missing letter</span><b>⭐ 12</b></div>
+          <div class="seq"><span>A</span><span>B</span><span class="gap">?</span><span>D</span></div>
+          <div class="listen"><span>🔊 Listen</span><span class="slow">🐢 Slow</span></div>
+          <div class="opts4"><span>E</span><span class="ok">C</span><span>G</span><span>Z</span></div>
+        </div>
+        <h4>English Fun: ABC & Numbers</h4>
+        <p data-i="g3_p"></p>
+        <ul><li data-i="g3_a"></li><li data-i="g3_b"></li></ul>
+        <div class="foot"><a class="btn" href="https://rosesunshineg.github.io/juegos-repaso/ingles.html" target="_blank" rel="noopener" data-i="play"></a></div>
+      </article>
+    </div>
+    <p class="disclaimer"><a class="btn" href="https://rosesunshineg.github.io/juegos-repaso/" target="_blank" rel="noopener" data-i="g_all"></a></p>
+    <p class="disclaimer" data-i="g_built"></p>
+  </section>
+
+  <!-- SIDE PROJECTS -->
+  <section id="side">
+    <div class="shead">
+      <h2 data-i="s_h"></h2>
+      <p data-i="s_p"></p>
+    </div>
+    <div class="grid2">
+      <article class="side">
+        <span class="status ok" data-i="s1_status"></span>
+        <div class="mtr" aria-hidden="true">
+          <span class="bdg">PROTOTIP · CADA DIA</span>
+          <div class="big">Què fem a <span>Mataró</span></div>
+          <div class="fl"><span class="on">Cap de setmana</span><span>★ Famílies</span><span>Música</span><span>Tots els barris</span></div>
+          <div class="ev"><div class="d">21<small>NOV</small></div><div><b>Immobile &amp; Rebondi<span class="free">Famílies</span></b><em>10:00 · Teatre del Cafè Nou · Espectacle familiar</em></div></div>
+          <div class="ev"><div class="d">21<small>NOV</small></div><div><b>El Modernisme a Mataró</b><em>11:00 · Des de l'Ajuntament · Ruta guiada</em></div></div>
+        </div>
+        <h4 data-i="s1_h"></h4>
+        <p data-i="s1_p"></p>
+        <div class="foot"><a class="btn" href="https://rosesunshineg.github.io/que-fem-mataro/" target="_blank" rel="noopener" data-i="s1_btn"></a><span class="built" data-i="ai_built"></span></div>
+      </article>
+      <article class="side">
+        <span class="status" data-i="s2_status"></span>
+        <h4>Andén Peques</h4>
+        <p data-i="s2_p"></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section id="community">
+    <div class="shead">
+      <h2 data-i="com_h"></h2>
+      <p data-i="com_p"></p>
+    </div>
+    <div class="grid3 comm">
+      <article class="side"><span class="status ok">2022 – </span><h4>Women Techmakers BCN</h4><p data-i="co1"></p></article>
+      <article class="side"><span class="status ok">2022 – 2026</span><h4>GDG Barcelona</h4><p data-i="co2"></p></article>
+      <article class="side"><span class="status ok">2026</span><h4>SheHub</h4><p data-i="co3"></p></article>
+      <article class="side"><span class="status ok">2024 – </span><h4>Liquid Galaxy · Google Summer of Code</h4><p data-i="co4"></p></article>
+      <article class="side"><span class="status ok">TecnoCampus Mataró</span><h4>Dona Tech Labs</h4><p data-i="co5"></p></article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="shead"><h2 data-i="a_h"></h2></div>
+    <div class="about">
+      <div>
+        <p data-i="a_p1"></p>
+        <p data-i="a_p2"></p>
+        <h5 data-i="a_langs"></h5>
+        <div class="langbars">
+          <div><b>Español</b><span data-i="lv_native"></span></div>
+          <div><b>English</b><span data-i="lv_bilingual"></span></div>
+          <div><b>Français</b><span data-i="lv_pro"></span></div>
+          <div><b>Català</b><span data-i="lv_pro2"></span></div>
+        </div>
+      </div>
+      <div>
+        <h5 style="margin-top:0" data-i="a_xp"></h5>
+        <ul class="xp">
+          <li><b data-i="xp0"></b><span data-i="xp0d"></span></li>
+          <li><b>Product UX/UI Lead | Product Owner</b><span>Keluo Tech Consulting · 2023–2024</span></li>
+          <li><b>International Operations & Systems Optimization Lead</b><span data-i="xp2d"></span></li>
+          <li><b>Business Systems Analyst · ERP & Procurement (SAP MM/SD)</b><span>Givaudan · 2008–2010</span></li>
+        </ul>
+        <h5 data-i="a_edu"></h5>
+        <ul class="xp">
+          <li><b>Product Manager</b><span>Coderhouse · 2022</span></li>
+          <li><b>UX/UI Design Advanced</b><span>Coderhouse · 2021–2022</span></li>
+          <li><b data-i="edu3"></b><span>ESCI-UPF · 2010–2011</span></li>
+          <li><b data-i="edu4"></b><span>Universitat Pompeu Fabra · 2007–2008</span></li>
+          <li><b data-i="edu2"></b><span data-i="edu2d"></span></li>
+        </ul>
+        <h5 data-i="a_cert"></h5>
+        <ul class="xp">
+          <li><b>Scrum</b><span data-i="cert1"></span></li>
+          <li><b>Google UX Design</b><span data-i="cert2"></span></li>
+          <li><b>AI for Designers</b><span></span></li>
+        </ul>
+        <h5 data-i="a_skills"></h5>
+        <div class="skills">
+          <span class="chip" data-i="sk1"></span><span class="chip" data-i="sk2"></span><span class="chip" data-i="sk3"></span>
+          <span class="chip" data-i="sk4"></span><span class="chip" data-i="sk5"></span><span class="chip">Figma</span>
+          <span class="chip">SAP</span><span class="chip" data-i="sk6"></span><span class="chip" data-i="sk7"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact">
+      <h2 data-i="c_h"></h2>
+      <p data-i="c_p"></p>
+      <a class="btn primary" href="mailto:rose.garcia.lopez@gmail.com" data-i="c_btn"></a>
+      <a class="btn" href="https://www.linkedin.com/in/rosesunshine" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <span class="mail">rose.garcia.lopez@gmail.com</span>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer><span data-i="footer"></span></footer>
+
+<script>
+const T={
+en:{
+g_all:"See all 6 games: maths, Spanish, economic sectors… ↗",
+vv_m_sub:"Create your CV by speaking",vv_m_s1:"1 Your story",vv_m_s2:"2 The offer",vv_m_s3:"3 Create CV",vv_m_s4:"4 Rate",vv_m_q:"Which language do you want to speak?",vv_m_hint:"Speak or type",vv_m_go:"New person",ke_f1:"redesigned",ke_f1s:"Success rate of the hardest task before the redesign",cm_f1:"participants",cm_f1s:"reshaped the information architecture",ea_f1:"of parents want this app",
+nav_work:"Work",nav_games:"Learning games",nav_about:"About",nav_contact:"Contact",
+hero_eyebrow:"Product Owner · UX Designer · Localization",
+hero_h1:"I turn complex processes into <em>simple products</em>.",
+hero_lede:"Fourteen years running international operations taught me how things really work behind the scenes. UX taught me how people feel when they use them. I bring both to digital products — in four languages.",
+chip1:"<b>14 yrs</b> international operations",chip2:"<b>Google</b> UX Design Certificate",chip3:"<b>4</b> languages: EN · FR · CA · ES",chip4:"<b>AI</b> prototyping",
+cta_work:"See my work ↓",cta_contact:"Get in touch",
+work_h:"Case studies",work_p:"From discovery to a working prototype: how I frame problems, test with real people and decide what to build.",
+l_problem:"Problem",l_solution:"Solution",l_decisions:"Decisions",l_role:"My role",l_process:"Process",l_outcome:"Outcome",l_research:"Research",l_strategy:"Strategy",
+vv_tag:"Featured · AI & social impact",vv_meta:"Independent project · 2026",
+vv_q:"Tell me about your last job, in your own language.",
+vv_intro:"Inspired by my daily work in welcome and user support at a humanitarian organization, where I saw how hard it is for newcomers to write a CV in a language they don't speak yet. Built independently, in my own time.",
+vv_problem:"Newcomers and refugees often have real work experience but can't put it into a CV in Spanish or Catalan.",
+vv_solution:"A voice-first web app: people tell their story in their own language (30+ options, from Arabic and Bambara to Ukrainian), and the AI builds a CV tailored to a specific job offer — in Spanish and Catalan, in ATS and visual versions.",
+vv_decisions:"No login, mobile first. The AI must never invent information and never asks sensitive questions (papers, religion, family, health). Each test ends with a rating step to collect feedback.",
+vv_role:"Product vision, user research, conversation and flow design, test plan with fictional cases only.",
+vv_insight:"<b>Iteration:</b> the landing page showed two calls to action with the same weight, and testers didn't know where to start. I rewrote the copy to make the primary action obvious.",
+vv_btn:"Live demo ↗",vv_beta_tag:"Live experiment",vv_beta_txt:"Viva Voz is still being tested and every session helps me improve it. Choose how you want to try it and leave a rating at the end, it takes two minutes. Please use fictional data only.",vv_try_p:"Try it: I’m writing my own CV ↗",vv_try_t:"Try it: I’m an employment advisor ↗",vv_built:"Built with <b>Lovable + Claude</b> · limited daily tests",
+ke_tag:"Professional · Design lead",ke_title:"Keluo — fitness booking app",
+ke_role:"Design Lead & Product Owner: I led the design and managed the product backlog in a small cross-functional team.",
+ke_problem:"People with busy schedules couldn't find or book the classes they wanted, and booking took too many steps.",
+ke_process:"Personas & POV → storyboard → task flows → paper prototype → usability tests with 5 users → redesign → high-fidelity screens in Figma.",
+ke_outcome:"I delivered the full high-fidelity design and the backlog before leaving the company.",
+ke_insight:"<b>Key insight:</b> cancelling a trainer appointment had a <b>20%</b> success rate (booking a class: 80%). Users confused “trainer” with “monitor” and didn't remember names, so I redesigned navigation around activities and appointments, added trainer photos and a waiting list for full classes.",
+ke_note:"Some screens omitted due to confidentiality.",
+cm_tag:"UX case study",cm_meta:"User-centred design · research to prototype",
+cm_problem:"There was no simple way to find coffee shops by what matters to you (specialty, eco, pet-friendly, gluten-free) and order or book a table without queuing.",
+cm_process:"Research and benchmarking → personas → storyboard → MVP in two phases → card sorting (10 participants) → information architecture before/after → wireframes → usability tests in Spanish and English → heuristic evaluation → UI kit.",
+cm_outcome:"An interactive high-fidelity prototype in Figma.",
+cm_insight:"<b>Data changed the design:</b> 7 of 10 participants grouped “amenities” and “description” under “Find a coffee shop”, so I rebuilt the information architecture around search.",
+cm_btn:"Open Figma prototype ↗",
+ea_tag:"Product strategy",ea_meta:"Product Owner programme · discovery to business model",
+ea_problem:"Communication between families and schools is slow and fragmented: notes on paper, WhatsApp groups, hard-to-book meetings with tutors.",
+ea_research:"Personas (a busy mum, a grandfather who looks after the kids), customer journeys, user stories, my own survey and a competitor analysis.",
+ea_strategy:"Market sizing (TAM 34,168 → SAM 21,000 → SOM 6,765 schools), product backlog, KPIs, OKRs, roadmap, unique value proposition and Business Model Canvas.",
+ea_insight:"<b>96%</b> of surveyed parents said they need an app to follow their children's school activities. The MVP focused on what they asked for most: an activity calendar and direct chat with tutors.",
+g_h:"Learning games, co-designed with my son",g_p:"My favourite user research: a 7-year-old who loves trains and tells you exactly what he thinks.",
+g_story_h:"A problem at home, solved like a product",
+g_story_p1:"My son had to learn the world's religions for school and couldn't memorise them. He loves trains — he wants to be a train driver and knew the station names before he could read. So I built him a train game.",
+g_quote:"“Will you make me something else?”",
+g_story_p2:"After playing it again and again, the topic became easy. Then he asked for more — and for the English game he became my co-designer, asking me to make it harder.",
+g_t1:"Understand the user",g_t1d:"Motivation: trains. Pain point: memorising abstract lists.",
+g_t2:"Prototype",g_t2d:"El Tren de les Religions: a quiz where the train moves forward with every right answer.",
+g_t3:"Iterate on feedback",g_t3d:"A new mechanic for the same content: Carrega els Vagons.",
+g_t4:"Co-design",g_t4d:"English Fun: he asked for dictation, fewer hints and losing stars on mistakes.",
+g1_p:"Quiz in Catalan: every correct answer moves the train to the next station.",g1_a:"Review mode with a study table",g1_b:"Touch and keyboard friendly",
+g2_p:"Drag-and-drop: load each crate onto the right train.",g2_a:"Second mechanic, same learning goal",g2_b:"Mobile-first, light and dark mode",
+g3_p:"Alphabet and counting by tens for 3rd grade, with British pronunciation.",g3_a:"Match, dictation and listening games",g3_b:"Difficulty tuned with his feedback",
+play:"Play ↗",
+g_built:"<b>Designed by me, built with AI.</b> Free to play — try them out!",
+s_h:"Side projects",s_p:"Smaller products I build to test ideas quickly.",
+s1_status:"Live prototype · updated daily",s1_h:"What's on in Mataró",
+s1_p:"Every plan in my town in one place — theatre, music, festivals and family activities — in Catalan, Spanish, English and French. A small Python script reads the public agendas every morning and GitHub Actions publishes the update automatically, always linking to the original source.",
+s1_btn:"Open prototype ↗",ai_built:"Built with <b>Claude</b> · Python · GitHub Actions",
+s2_status:"In progress",s2_p:"An app of family-friendly events and train outings for children who love trains (like mine). Currently defining features and a merchandise-based business model.",
+a_h:"About me",
+a_p1:"I'm a Product Owner and UX designer based in Mataró (Barcelona). For almost 14 years I worked in international operations and logistics, where I learned to map processes, coordinate teams across countries and fix what slows people down.",
+a_p2:"I trained in UX, earned the Google UX Design Certificate and led design and the backlog for a fitness app. Today I use AI to go from idea to working prototype fast, and I care about accessible, multilingual products that leave no one behind.",
+a_langs:"Languages",lv_native:"Native",lv_bilingual:"Bilingual",lv_pro:"Full professional · BA in Translation",lv_pro2:"Professional",
+a_xp:"Experience",xp1:"Design Lead & Product Owner",xp2:"International Operations & Logistics",xp3:"SAP Purchasing Analyst",
+a_edu:"Education",edu1:"Google UX Design Certificate",edu2:"BA in Translation",edu2d:"English · French · Spanish",
+a_skills:"Skills",sk1:"Product backlog & user stories",sk2:"User research & usability testing",sk3:"Prototyping",sk4:"KPIs & OKRs",sk5:"Localization",sk6:"AI prototyping (Claude, Lovable)",sk7:"Process improvement",
+c_h:"Let's <em>talk</em>",c_p:"I'm looking for a role as Product Owner, Product Manager or Product Operations in a tech company — remote or in Barcelona.",c_btn:"Email me",
+hero_eyebrow:"Product Owner & Product Ops · Community Builder",chip5:"<b>Scrum</b> certified",nav_comm:"Community",
+cm_meta:"Coderhouse · UX/UI Design Advanced · 2021–2022",ea_meta:"Coderhouse · Product Manager programme · 2022",
+ke_role:"Product UX/UI Lead & Product Owner: I led discovery and delivery, defined the roadmap, prioritised the backlog and acceptance criteria, and facilitated sprint planning, reviews and retros with design, development and business.",
+a_p2:"I'm Scrum certified and trained in UX at Coderhouse and Google. I led product and design for a fitness app, and I also work on AI quality evaluation, applying rating guidelines to judge relevance and user intent. Today I use AI to go from idea to working prototype fast, and I care about accessible, multilingual products that leave no one behind.",
+com_h:"Community & leadership",com_p:"Since 2022 I've been building tech communities, organising events and teaching — mostly to bring more women into product and AI.",
+co1:"Volunteer organiser: tech events on diversity and inclusion, learning experiences on Product, AI and digital skills for women, and partnerships with institutions and companies.",
+co2:"Volunteer Product Community Lead in one of the largest Google developer communities: speakers, partners, organisers and community growth.",
+co3:"Product Manager (volunteer) for a Design Systems initiative: structure and governance, and aligning product, design and engineering around shared standards.",
+co4:"Mentor in an open-source programme on immersive and geospatial technology: active listening, guidance and structured feedback.",
+co5:"Workshop I teach: “Eines digitals per crear contingut visual” — Canva and Adobe Express for women entering tech.",
+
+xp0:"Product Manager · Design Systems",xp0d:"SheHub · 2026 · volunteer",xp2d:"Arquetypo · 2011–2024 · −12% operational costs through process optimisation, KPIs and dashboards",
+edu2:"BA in Translation (French · English · Spanish)",edu2d:"Universidad Central de Venezuela · 1998–2004",edu3:"Postgraduate in Foreign Trade",edu4:"Translator & Interpreter",
+a_edu:"Education",a_cert:"Certifications",cert1:"Certified",cert2:"Google · Coursera",
+footer:"© 2026 Rosemarie García López · Designed by me, built with AI"},
+
+fr:{
+g_all:"Voir les 6 jeux : maths, espagnol, secteurs économiques… ↗",
+vv_m_sub:"Crée ton CV en parlant",vv_m_s1:"1 Ton histoire",vv_m_s2:"2 L’offre",vv_m_s3:"3 Créer le CV",vv_m_s4:"4 Évaluer",vv_m_q:"Dans quelle langue veux-tu parler ?",vv_m_hint:"Parle ou écris",vv_m_go:"Nouvelle personne",ke_f1:"repensé",ke_f1s:"Taux de réussite de la tâche la plus difficile avant la refonte",cm_f1:"participants",cm_f1s:"ont redéfini l’architecture de l’information",ea_f1:"des parents veulent cette appli",
+nav_work:"Projets",nav_games:"Jeux éducatifs",nav_about:"À propos",nav_contact:"Contact",
+hero_eyebrow:"Product Owner · UX Designer · Localisation",
+hero_h1:"Je transforme des processus complexes en <em>produits simples</em>.",
+hero_lede:"Quatorze ans dans les opérations internationales m'ont appris comment les choses fonctionnent vraiment en coulisses. L'UX m'a appris ce que ressentent les gens en les utilisant. J'apporte les deux aux produits numériques — en quatre langues.",
+chip1:"<b>14 ans</b> d'opérations internationales",chip2:"Certificat <b>Google</b> UX Design",chip3:"<b>4</b> langues : EN · FR · CA · ES",chip4:"Prototypage avec l'<b>IA</b>",
+cta_work:"Voir mes projets ↓",cta_contact:"Me contacter",
+work_h:"Études de cas",work_p:"De la découverte au prototype fonctionnel : comment je pose les problèmes, teste avec de vraies personnes et décide quoi construire.",
+l_problem:"Problème",l_solution:"Solution",l_decisions:"Décisions",l_role:"Mon rôle",l_process:"Démarche",l_outcome:"Résultat",l_research:"Recherche",l_strategy:"Stratégie",
+vv_tag:"À la une · IA et impact social",vv_meta:"Projet indépendant · 2026",
+vv_q:"Parle-moi de ton dernier emploi, dans ta langue.",
+vv_intro:"Inspiré par mon travail quotidien d'accueil et de support aux usagers dans une organisation humanitaire, où j'ai vu combien il est difficile pour les nouveaux arrivants de rédiger un CV dans une langue qu'ils ne parlent pas encore. Réalisé de façon indépendante, sur mon temps libre.",
+vv_problem:"Les personnes nouvellement arrivées et réfugiées ont souvent une vraie expérience professionnelle, mais ne parviennent pas à la mettre dans un CV en espagnol ou en catalan.",
+vv_solution:"Une application web pensée pour la voix : la personne raconte son parcours dans sa langue (plus de 30 options, de l'arabe au bambara et à l'ukrainien) et l'IA rédige un CV adapté à une offre précise — en espagnol et en catalan, en version ATS et visuelle.",
+vv_decisions:"Sans inscription, mobile d'abord. L'IA ne doit jamais inventer d'information ni poser de questions sensibles (papiers, religion, famille, santé). Chaque test se termine par une étape d'évaluation.",
+vv_role:"Vision produit, recherche utilisateur, conception de la conversation et du parcours, plan de tests avec des cas fictifs uniquement.",
+vv_insight:"<b>Itération :</b> la page d'accueil affichait deux appels à l'action de même poids et les testeurs ne savaient pas par où commencer. J'ai réécrit les textes pour rendre l'action principale évidente.",
+vv_btn:"Démo en ligne ↗",vv_beta_tag:"Expérience en cours",vv_beta_txt:"Viva Voz est encore en phase de test et chaque session m’aide à l’améliorer. Choisis comment tu veux l’essayer et laisse une évaluation à la fin, cela prend deux minutes. Merci d’utiliser uniquement des données fictives.",vv_try_p:"Essayer : je fais mon propre CV ↗",vv_try_t:"Essayer : je suis conseiller·ère emploi ↗",vv_built:"Réalisé avec <b>Lovable + Claude</b> · tests quotidiens limités",
+ke_tag:"Professionnel · Lead design",ke_title:"Keluo — appli de réservation fitness",
+ke_role:"Design Lead & Product Owner : j'ai dirigé le design et géré le backlog produit au sein d'une petite équipe pluridisciplinaire.",
+ke_problem:"Les personnes très occupées ne trouvaient pas ou ne pouvaient pas réserver les cours qu'elles voulaient, et la réservation demandait trop d'étapes.",
+ke_process:"Personas et POV → storyboard → parcours de tâches → prototype papier → tests d'utilisabilité avec 5 personnes → refonte → écrans haute fidélité dans Figma.",
+ke_outcome:"J'ai livré le design haute fidélité complet et le backlog avant de quitter l'entreprise.",
+ke_insight:"<b>Insight clé :</b> annuler un rendez-vous avec un entraîneur n'avait que <b>20 %</b> de réussite (réserver un cours : 80 %). Les utilisateurs confondaient « entraîneur » et « moniteur » et ne retenaient pas les noms : j'ai réorganisé la navigation autour des activités et des rendez-vous, ajouté les photos des entraîneurs et une liste d'attente pour les cours complets.",
+ke_note:"Certains écrans ont été omis pour des raisons de confidentialité.",
+cm_tag:"Étude de cas UX",cm_meta:"Conception centrée utilisateur · de la recherche au prototype",
+cm_problem:"Aucun moyen simple de trouver un café selon ce qui compte pour soi (spécialité, bio, animaux acceptés, sans gluten) et de commander ou réserver sans faire la queue.",
+cm_process:"Recherche et benchmark → personas → storyboard → MVP en deux phases → tri par cartes (10 participants) → architecture de l'information avant/après → wireframes → tests d'utilisabilité en espagnol et en anglais → évaluation heuristique → UI kit.",
+cm_outcome:"Un prototype interactif haute fidélité dans Figma.",
+cm_insight:"<b>Les données ont changé le design :</b> 7 participants sur 10 ont classé « équipements » et « description » dans « Trouver un café » ; j'ai donc reconstruit l'architecture de l'information autour de la recherche.",
+cm_btn:"Ouvrir le prototype Figma ↗",
+ea_tag:"Stratégie produit",ea_meta:"Formation Product Owner · de la découverte au modèle économique",
+ea_problem:"La communication entre familles et écoles est lente et dispersée : mots sur papier, groupes WhatsApp, rendez-vous difficiles à obtenir avec les tuteurs.",
+ea_research:"Personas (une maman très occupée, un grand-père qui garde ses petits-enfants), parcours client, user stories, enquête réalisée par moi-même et analyse de la concurrence.",
+ea_strategy:"Taille du marché (TAM 34 168 → SAM 21 000 → SOM 6 765 écoles), backlog produit, KPI, OKR, roadmap, proposition de valeur unique et Business Model Canvas.",
+ea_insight:"<b>96 %</b> des parents interrogés jugent nécessaire une appli pour suivre les activités scolaires de leurs enfants. Le MVP s'est concentré sur leurs deux demandes principales : un calendrier des activités et un chat direct avec les tuteurs.",
+g_h:"Jeux éducatifs, co-conçus avec mon fils",g_p:"Ma recherche utilisateur préférée : un enfant de 7 ans qui adore les trains et dit exactement ce qu'il pense.",
+g_story_h:"Un problème à la maison, résolu comme un produit",
+g_story_p1:"Mon fils devait apprendre les religions du monde pour l'école et n'arrivait pas à les mémoriser. Il adore les trains — il veut être conducteur et connaissait le nom des gares avant de savoir lire. Je lui ai donc créé un jeu de trains.",
+g_quote:"« Tu m'en fais un autre ? »",
+g_story_p2:"Après y avoir joué encore et encore, le sujet est devenu facile. Puis il en a redemandé — et pour le jeu d'anglais, il est devenu mon co-designer en me demandant de le rendre plus difficile.",
+g_t1:"Comprendre l'utilisateur",g_t1d:"Motivation : les trains. Difficulté : mémoriser des listes abstraites.",
+g_t2:"Prototyper",g_t2d:"El Tren de les Religions : un quiz où le train avance à chaque bonne réponse.",
+g_t3:"Itérer selon ses retours",g_t3d:"Une nouvelle mécanique pour le même contenu : Carrega els Vagons.",
+g_t4:"Co-concevoir",g_t4d:"English Fun : il a demandé des dictées, moins d'indices et de perdre des étoiles à chaque erreur.",
+g1_p:"Quiz en catalan : chaque bonne réponse fait avancer le train jusqu'à la gare suivante.",g1_a:"Mode révision avec un tableau",g1_b:"Utilisable au toucher et au clavier",
+g2_p:"Glisser-déposer : charger chaque caisse dans le bon train.",g2_a:"Deuxième mécanique, même objectif",g2_b:"Mobile d'abord, mode clair et sombre",
+g3_p:"L'alphabet et compter de dix en dix pour le CE2, avec prononciation britannique.",g3_a:"Associations, dictées et écoute",g3_b:"Difficulté ajustée selon ses retours",
+play:"Jouer ↗",
+g_built:"<b>Conçus par moi, réalisés avec l'IA.</b> Gratuits — essayez-les !",
+s_h:"Projets parallèles",s_p:"De plus petits produits pour tester des idées rapidement.",
+s1_status:"Prototype en ligne · mis à jour chaque jour",s1_h:"Que faire à Mataró",
+s1_p:"Toutes les sorties de ma ville au même endroit — théâtre, musique, fêtes et activités en famille — en catalan, espagnol, anglais et français. Un petit script Python lit chaque matin les agendas publics et GitHub Actions publie la mise à jour automatiquement, toujours avec un lien vers la source.",
+s1_btn:"Ouvrir le prototype ↗",ai_built:"Réalisé avec <b>Claude</b> · Python · GitHub Actions",
+s2_status:"En cours",s2_p:"Une appli de sorties en famille et de balades en train pour les enfants qui adorent les trains (comme le mien). Définition des fonctionnalités et d'un modèle économique basé sur le merchandising.",
+a_h:"À propos",
+a_p1:"Je suis Product Owner et UX designer, basée à Mataró (Barcelone). Pendant près de 14 ans, j'ai travaillé dans les opérations et la logistique internationales, où j'ai appris à cartographier des processus, coordonner des équipes dans plusieurs pays et lever ce qui freine les gens.",
+a_p2:"Je me suis formée à l'UX, j'ai obtenu le certificat Google UX Design et j'ai dirigé le design et le backlog d'une appli de fitness. Aujourd'hui, j'utilise l'IA pour passer vite de l'idée au prototype fonctionnel, et je tiens à des produits accessibles et multilingues qui ne laissent personne de côté.",
+a_langs:"Langues",lv_native:"Langue maternelle",lv_bilingual:"Bilingue",lv_pro:"Professionnel complet · Licence en traduction",lv_pro2:"Professionnel",
+a_xp:"Expérience",xp1:"Design Lead & Product Owner",xp2:"Opérations et logistique internationales",xp3:"Analyste achats SAP",
+a_edu:"Formation",edu1:"Certificat Google UX Design",edu2:"Licence en traduction",edu2d:"Anglais · français · espagnol",
+a_skills:"Compétences",sk1:"Backlog produit et user stories",sk2:"Recherche utilisateur et tests",sk3:"Prototypage",sk4:"KPI et OKR",sk5:"Localisation",sk6:"Prototypage IA (Claude, Lovable)",sk7:"Amélioration des processus",
+c_h:"Parlons-<em>en</em>",c_p:"Je recherche un poste de Product Owner, Product Manager ou Product Operations dans une entreprise tech — à distance ou à Barcelone.",c_btn:"M'écrire",
+hero_eyebrow:"Product Owner & Product Ops · Community Builder",chip5:"Certifiée <b>Scrum</b>",nav_comm:"Communauté",
+cm_meta:"Coderhouse · UX/UI Design Advanced · 2021–2022",ea_meta:"Coderhouse · Formation Product Manager · 2022",
+ke_role:"Product UX/UI Lead & Product Owner : j'ai mené la découverte et la livraison, défini la roadmap, priorisé le backlog et les critères d'acceptation, et animé sprint planning, reviews et rétros avec le design, le développement et le business.",
+a_p2:"Certifiée Scrum, formée à l'UX chez Coderhouse et Google, j'ai dirigé le produit et le design d'une appli de fitness. Je travaille aussi sur l'évaluation de la qualité de l'IA, en appliquant des guidelines de notation pour juger la pertinence et l'intention de l'utilisateur. Aujourd'hui, j'utilise l'IA pour passer vite de l'idée au prototype, et je tiens à des produits accessibles et multilingues qui ne laissent personne de côté.",
+com_h:"Communauté et leadership",com_p:"Depuis 2022, je construis des communautés tech, j'organise des événements et j'enseigne — surtout pour amener plus de femmes vers le produit et l'IA.",
+co1:"Organisatrice bénévole : événements tech sur la diversité et l'inclusion, parcours d'apprentissage sur le produit, l'IA et le numérique pour les femmes, partenariats avec institutions et entreprises.",
+co2:"Product Community Lead bénévole dans l'une des plus grandes communautés de développeurs Google : intervenants, partenaires, organisateurs et croissance de la communauté.",
+co3:"Product Manager (bénévole) d'un projet de Design System : structure et gouvernance, alignement du produit, du design et de l'ingénierie autour de standards communs.",
+co4:"Mentore dans un programme open source sur les technologies immersives et géospatiales : écoute active, accompagnement et feedback structuré.",
+co5:"Atelier que j'anime : « Eines digitals per crear contingut visual » — Canva et Adobe Express pour des femmes qui se lancent dans la tech.",
+
+xp0:"Product Manager · Design Systems",xp0d:"SheHub · 2026 · bénévole",xp2d:"Arquetypo · 2011–2024 · −12 % de coûts opérationnels grâce à l'optimisation des processus, aux KPI et aux tableaux de bord",
+edu2:"Licence en traduction (français · anglais · espagnol)",edu2d:"Universidad Central de Venezuela · 1998–2004",edu3:"Postgrade en commerce international",edu4:"Traductrice et interprète",
+a_edu:"Formation",a_cert:"Certifications",cert1:"Certifiée",cert2:"Google · Coursera",
+footer:"© 2026 Rosemarie García López · Conçu par moi, réalisé avec l'IA"},
+
+ca:{
+g_all:"Veure els 6 jocs: mates, castellà, sectors econòmics… ↗",
+vv_m_sub:"Crea el teu CV parlant",vv_m_s1:"1 La teva història",vv_m_s2:"2 L’oferta",vv_m_s3:"3 Crear el CV",vv_m_s4:"4 Valora",vv_m_q:"En quin idioma vols parlar?",vv_m_hint:"Parla o escriu",vv_m_go:"Nova persona",ke_f1:"redissenyat",ke_f1s:"Èxit de la tasca més difícil abans del redisseny",cm_f1:"participants",cm_f1s:"van redefinir l’arquitectura de la informació",ea_f1:"de les famílies volen aquesta app",
+nav_work:"Projectes",nav_games:"Jocs educatius",nav_about:"Sobre mi",nav_contact:"Contacte",
+hero_eyebrow:"Product Owner · Dissenyadora UX · Localització",
+hero_h1:"Converteixo processos complexos en <em>productes senzills</em>.",
+hero_lede:"Catorze anys en operacions internacionals em van ensenyar com funcionen de debò les coses per dins. L'UX em va ensenyar què senten les persones quan les fan servir. Aporto totes dues coses als productes digitals — en quatre idiomes.",
+chip1:"<b>14 anys</b> en operacions internacionals",chip2:"Certificat <b>Google</b> UX Design",chip3:"<b>4</b> idiomes: EN · FR · CA · ES",chip4:"Prototips amb <b>IA</b>",
+cta_work:"Veure projectes ↓",cta_contact:"Contacta'm",
+work_h:"Casos d'estudi",work_p:"De la descoberta al prototip funcional: com plantejo els problemes, provo amb persones reals i decideixo què construir.",
+l_problem:"Problema",l_solution:"Solució",l_decisions:"Decisions",l_role:"El meu rol",l_process:"Procés",l_outcome:"Resultat",l_research:"Recerca",l_strategy:"Estratègia",
+vv_tag:"Destacat · IA i impacte social",vv_meta:"Projecte independent · 2026",
+vv_q:"Explica'm la teva darrera feina, en el teu idioma.",
+vv_intro:"Inspirat en la meva feina diària d'acollida i suport a l'usuari en una organització humanitària, on vaig veure com costa a les persones nouvingudes fer un CV en una llengua que encara no parlen. Fet de manera independent, en el meu temps lliure.",
+vv_problem:"Les persones nouvingudes i refugiades sovint tenen experiència laboral real, però no la saben plasmar en un CV en castellà o català.",
+vv_solution:"Una aplicació web pensada per a la veu: la persona explica la seva història en el seu idioma (més de 30 opcions, de l'àrab i el bambara a l'ucraïnès) i la IA crea un CV adaptat a una oferta concreta — en castellà i català, en versió ATS i visual.",
+vv_decisions:"Sense registre, pensada per al mòbil. La IA no s'ha d'inventar mai res ni fer preguntes sensibles (papers, religió, família, salut). Cada prova acaba amb un pas de valoració.",
+vv_role:"Visió de producte, recerca d'usuaris, disseny de la conversa i del flux, pla de proves només amb casos inventats.",
+vv_insight:"<b>Iteració:</b> la portada mostrava dues crides a l'acció amb el mateix pes i qui la provava no sabia per on començar. Vaig reescriure els textos perquè l'acció principal fos evident.",
+vv_btn:"Demo en línia ↗",vv_beta_tag:"Experiment obert",vv_beta_txt:"Viva Voz encara s’està provant i cada sessió m’ajuda a millorar-la. Tria com la vols provar i deixa una valoració al final, només són dos minuts. Fes servir només dades inventades.",vv_try_p:"Prova-la: faig el meu propi CV ↗",vv_try_t:"Prova-la: soc tècnic/a d’ocupació ↗",vv_built:"Fet amb <b>Lovable + Claude</b> · proves diàries limitades",
+ke_tag:"Professional · Lideratge de disseny",ke_title:"Keluo — app de reserves de fitness",
+ke_role:"Design Lead i Product Owner: vaig liderar el disseny i gestionar el backlog del producte en un equip petit i multidisciplinari.",
+ke_problem:"Les persones amb horaris atapeïts no trobaven o no podien reservar les classes que volien, i reservar requeria massa passos.",
+ke_process:"Persones i POV → storyboard → fluxos de tasques → prototip en paper → proves d'usabilitat amb 5 persones → redisseny → pantalles d'alta fidelitat a Figma.",
+ke_outcome:"Vaig lliurar el disseny complet d'alta fidelitat i el backlog abans de deixar l'empresa.",
+ke_insight:"<b>Aprenentatge clau:</b> anul·lar una cita amb un entrenador només tenia un <b>20 %</b> d'èxit (reservar una classe: 80 %). Els usuaris confonien «entrenador» i «monitor» i no recordaven els noms, així que vaig reorganitzar la navegació al voltant de les activitats i les cites, vaig afegir fotos dels entrenadors i una llista d'espera per a les classes plenes.",
+ke_note:"Algunes pantalles s'han omès per confidencialitat.",
+cm_tag:"Cas d'estudi UX",cm_meta:"Disseny centrat en l'usuari · de la recerca al prototip",
+cm_problem:"No hi havia una manera senzilla de trobar cafeteries segons el que t'importa (d'especialitat, ecològiques, que admetin animals, sense gluten) i demanar o reservar sense cues.",
+cm_process:"Recerca i benchmarking → persones → storyboard → MVP en dues fases → card sorting (10 participants) → arquitectura de la informació abans/després → wireframes → proves d'usabilitat en castellà i anglès → avaluació heurística → UI kit.",
+cm_outcome:"Un prototip interactiu d'alta fidelitat a Figma.",
+cm_insight:"<b>Les dades van canviar el disseny:</b> 7 de cada 10 participants van agrupar «comoditats» i «descripció» dins de «Buscar cafeteria», així que vaig refer l'arquitectura de la informació al voltant de la cerca.",
+cm_btn:"Obrir el prototip a Figma ↗",
+ea_tag:"Estratègia de producte",ea_meta:"Formació de Product Owner · de la descoberta al model de negoci",
+ea_problem:"La comunicació entre famílies i escoles és lenta i dispersa: notes en paper, grups de WhatsApp, reunions amb tutors difícils de concertar.",
+ea_research:"Persones (una mare molt ocupada, un avi que cuida els néts), customer journeys, històries d'usuari, una enquesta pròpia i una anàlisi de la competència.",
+ea_strategy:"Mida del mercat (TAM 34.168 → SAM 21.000 → SOM 6.765 escoles), backlog de producte, KPI, OKR, roadmap, proposta única de valor i Business Model Canvas.",
+ea_insight:"El <b>96 %</b> de les famílies enquestades veu necessària una app per seguir les activitats escolars dels fills. El MVP es va centrar en el que més demanaven: un calendari d'activitats i un xat directe amb els tutors.",
+g_h:"Jocs educatius, co-dissenyats amb el meu fill",g_p:"La meva recerca d'usuaris preferida: un nen de 7 anys a qui li encanten els trens i que et diu exactament què en pensa.",
+g_story_h:"Un problema a casa, resolt com un producte",
+g_story_p1:"El meu fill havia d'aprendre les religions del món per a l'escola i no aconseguia memoritzar-les. Li encanten els trens — vol ser maquinista i se sabia les estacions abans d'aprendre a llegir. Així que li vaig fer un joc de trens.",
+g_quote:"«Me'n fas un altre?»",
+g_story_p2:"Després de jugar-hi molts cops, el tema li va resultar fàcil. Llavors en va demanar més — i en el joc d'anglès es va convertir en el meu co-dissenyador: em demanava que fos més difícil.",
+g_t1:"Entendre l'usuari",g_t1d:"Motivació: els trens. Dificultat: memoritzar llistes abstractes.",
+g_t2:"Prototipar",g_t2d:"El Tren de les Religions: un qüestionari en què el tren avança amb cada encert.",
+g_t3:"Iterar amb el seu feedback",g_t3d:"Una mecànica nova per al mateix contingut: Carrega els Vagons.",
+g_t4:"Co-dissenyar",g_t4d:"English Fun: va demanar dictats, menys pistes i perdre estrelles amb els errors.",
+g1_p:"Qüestionari en català: cada encert fa avançar el tren fins a la següent estació.",g1_a:"Mode repàs amb una taula",g1_b:"Funciona amb el dit i amb el teclat",
+g2_p:"Arrossegar i deixar anar: carrega cada caixa al tren correcte.",g2_a:"Segona mecànica, mateix objectiu",g2_b:"Pensat per al mòbil, mode clar i fosc",
+g3_p:"L'abecedari i comptar de deu en deu per a 3r de primària, amb pronúncia britànica.",g3_a:"Jocs d'unir, dictats i comprensió oral",g3_b:"Dificultat ajustada amb el seu feedback",
+play:"Juga ↗",
+g_built:"<b>Dissenyats per mi, creats amb IA.</b> Gratuïts — prova'ls!",
+s_h:"Projectes paral·lels",s_p:"Productes més petits que faig per provar idees ràpidament.",
+s1_status:"Prototip en línia · s'actualitza cada dia",s1_h:"Què fem a Mataró",
+s1_p:"Tots els plans de la meva ciutat en un sol lloc — teatre, música, festes i activitats en família — en català, castellà, anglès i francès. Un petit script de Python llegeix cada matí les agendes públiques i GitHub Actions publica l'actualització automàticament, sempre enllaçant a la font original.",
+s1_btn:"Obrir el prototip ↗",ai_built:"Fet amb <b>Claude</b> · Python · GitHub Actions",
+s2_status:"En curs",s2_p:"Una app d'esdeveniments en família i sortides en tren per a infants a qui els encanten els trens (com el meu). Ara definint funcionalitats i un model de negoci basat en marxandatge.",
+a_h:"Sobre mi",
+a_p1:"Soc Product Owner i dissenyadora UX i visc a Mataró (Barcelona). Durant gairebé 14 anys vaig treballar en operacions i logística internacionals, on vaig aprendre a mapar processos, coordinar equips de diversos països i resoldre el que frena les persones.",
+a_p2:"Em vaig formar en UX, vaig obtenir el certificat Google UX Design i vaig liderar el disseny i el backlog d'una app de fitness. Avui faig servir la IA per passar ràpidament de la idea al prototip funcional, i m'importen els productes accessibles i multilingües que no deixen ningú enrere.",
+a_langs:"Idiomes",lv_native:"Nativa",lv_bilingual:"Bilingüe",lv_pro:"Professional complet · Llicenciatura en Traducció",lv_pro2:"Professional",
+a_xp:"Experiència",xp1:"Design Lead i Product Owner",xp2:"Operacions i logística internacionals",xp3:"Analista de compres SAP",
+a_edu:"Formació",edu1:"Certificat Google UX Design",edu2:"Llicenciatura en Traducció",edu2d:"Anglès · francès · castellà",
+a_skills:"Competències",sk1:"Backlog de producte i històries d'usuari",sk2:"Recerca d'usuaris i proves",sk3:"Prototipat",sk4:"KPI i OKR",sk5:"Localització",sk6:"Prototipat amb IA (Claude, Lovable)",sk7:"Millora de processos",
+c_h:"<em>Parlem-ne</em>",c_p:"Busco una feina de Product Owner, Product Manager o Product Operations en una empresa tecnològica — en remot o a Barcelona.",c_btn:"Escriu-me",
+hero_eyebrow:"Product Owner & Product Ops · Community Builder",chip5:"Certificada en <b>Scrum</b>",nav_comm:"Comunitat",
+cm_meta:"Coderhouse · UX/UI Design Advanced · 2021–2022",ea_meta:"Coderhouse · Formació de Product Manager · 2022",
+ke_role:"Product UX/UI Lead i Product Owner: vaig liderar la descoberta i el lliurament, definir el roadmap, prioritzar el backlog i els criteris d'acceptació, i dinamitzar sprint plannings, reviews i retros amb disseny, desenvolupament i negoci.",
+a_p2:"Estic certificada en Scrum i em vaig formar en UX a Coderhouse i Google. Vaig liderar el producte i el disseny d'una app de fitness, i també treballo en avaluació de qualitat d'IA, aplicant guies de valoració per jutjar la rellevància i la intenció de l'usuari. Avui faig servir la IA per passar ràpidament de la idea al prototip, i m'importen els productes accessibles i multilingües que no deixen ningú enrere.",
+com_h:"Comunitat i lideratge",com_p:"Des del 2022 construeixo comunitats tecnològiques, organitzo esdeveniments i faig formació — sobretot perquè més dones entrin al món del producte i la IA.",
+co1:"Organitzadora voluntària: esdeveniments tecnològics sobre diversitat i inclusió, formacions de producte, IA i competències digitals per a dones, i aliances amb institucions i empreses.",
+co2:"Product Community Lead voluntària en una de les comunitats de desenvolupadors de Google més grans: ponents, partners, organitzadors i creixement de la comunitat.",
+co3:"Product Manager (voluntària) d'una iniciativa de Design Systems: estructura i governança, i alineació de producte, disseny i enginyeria al voltant d'estàndards comuns.",
+co4:"Mentora en un programa de codi obert sobre tecnologies immersives i geoespacials: escolta activa, orientació i feedback estructurat.",
+co5:"Taller que imparteixo: «Eines digitals per crear contingut visual» — Canva i Adobe Express per a dones que s'inicien en la tecnologia.",
+
+xp0:"Product Manager · Design Systems",xp0d:"SheHub · 2026 · voluntariat",xp2d:"Arquetypo · 2011–2024 · −12 % de costos operatius gràcies a l'optimització de processos, KPI i dashboards",
+edu2:"Llicenciatura en Traducció (francès · anglès · castellà)",edu2d:"Universidad Central de Venezuela · 1998–2004",edu3:"Postgrau en Comerç Exterior",edu4:"Traductora i intèrpret",
+a_edu:"Formació",a_cert:"Certificacions",cert1:"Certificada",cert2:"Google · Coursera",
+footer:"© 2026 Rosemarie García López · Dissenyat per mi, creat amb IA"},
+
+es:{
+g_all:"Ver los 6 juegos: mates, castellano, sectores económicos… ↗",
+vv_m_sub:"Crea tu currículum hablando",vv_m_s1:"1 Tu historia",vv_m_s2:"2 La oferta",vv_m_s3:"3 Crear el CV",vv_m_s4:"4 Valora",vv_m_q:"¿En qué idioma quieres hablar?",vv_m_hint:"Habla o escribe",vv_m_go:"Nueva persona",ke_f1:"rediseñado",ke_f1s:"Éxito de la tarea más difícil antes del rediseño",cm_f1:"participantes",cm_f1s:"redefinieron la arquitectura de información",ea_f1:"de las familias quiere esta app",
+nav_work:"Proyectos",nav_games:"Juegos educativos",nav_about:"Sobre mí",nav_contact:"Contacto",
+hero_eyebrow:"Product Owner · Diseñadora UX · Localización",
+hero_h1:"Convierto procesos complejos en <em>productos sencillos</em>.",
+hero_lede:"Catorce años en operaciones internacionales me enseñaron cómo funcionan de verdad las cosas por dentro. El UX me enseñó qué sienten las personas al usarlas. Llevo ambas cosas a los productos digitales — en cuatro idiomas.",
+chip1:"<b>14 años</b> en operaciones internacionales",chip2:"Certificado <b>Google</b> UX Design",chip3:"<b>4</b> idiomas: EN · FR · CA · ES",chip4:"Prototipos con <b>IA</b>",
+cta_work:"Ver proyectos ↓",cta_contact:"Contáctame",
+work_h:"Casos de estudio",work_p:"Del descubrimiento al prototipo funcional: cómo planteo los problemas, pruebo con personas reales y decido qué construir.",
+l_problem:"Problema",l_solution:"Solución",l_decisions:"Decisiones",l_role:"Mi rol",l_process:"Proceso",l_outcome:"Resultado",l_research:"Investigación",l_strategy:"Estrategia",
+vv_tag:"Destacado · IA e impacto social",vv_meta:"Proyecto independiente · 2026",
+vv_q:"Cuéntame tu último trabajo, en tu idioma.",
+vv_intro:"Inspirado en mi trabajo diario de acogida y soporte al usuario en una organización humanitaria, donde vi lo difícil que es para las personas recién llegadas hacer un CV en un idioma que todavía no hablan. Hecho de forma independiente, en mi tiempo libre.",
+vv_problem:"Las personas recién llegadas y refugiadas suelen tener experiencia laboral real, pero no saben plasmarla en un CV en castellano o catalán.",
+vv_solution:"Una aplicación web pensada para la voz: la persona cuenta su historia en su idioma (más de 30 opciones, del árabe y el bambara al ucraniano) y la IA crea un CV adaptado a una oferta concreta — en castellano y catalán, en versión ATS y visual.",
+vv_decisions:"Sin registro, pensada para el móvil. La IA nunca debe inventar nada ni hacer preguntas sensibles (papeles, religión, familia, salud). Cada prueba termina con un paso de valoración.",
+vv_role:"Visión de producto, investigación con usuarios, diseño de la conversación y del flujo, plan de pruebas solo con casos inventados.",
+vv_insight:"<b>Iteración:</b> la portada mostraba dos llamadas a la acción con el mismo peso y quien la probaba no sabía por dónde empezar. Reescribí los textos para que la acción principal fuera evidente.",
+vv_btn:"Demo en línea ↗",vv_beta_tag:"Experimento abierto",vv_beta_txt:"Viva Voz todavía está en fase de pruebas y cada sesión me ayuda a mejorarla. Elige cómo quieres probarla y deja una valoración al final, son solo dos minutos. Usa únicamente datos inventados.",vv_try_p:"Pruébala: hago mi propio CV ↗",vv_try_t:"Pruébala: soy técnico/a de empleo ↗",vv_built:"Hecho con <b>Lovable + Claude</b> · pruebas diarias limitadas",
+ke_tag:"Profesional · Liderazgo de diseño",ke_title:"Keluo — app de reservas de fitness",
+ke_role:"Design Lead y Product Owner: lideré el diseño y gestioné el backlog del producto en un equipo pequeño y multidisciplinar.",
+ke_problem:"Las personas con horarios apretados no encontraban o no podían reservar las clases que querían, y reservar requería demasiados pasos.",
+ke_process:"Arquetipos y POV → storyboard → flujos de tareas → prototipo en papel → pruebas de usabilidad con 5 personas → rediseño → pantallas en alta fidelidad en Figma.",
+ke_outcome:"Entregué el diseño completo en alta fidelidad y el backlog antes de dejar la empresa.",
+ke_insight:"<b>Aprendizaje clave:</b> anular una cita con un entrenador solo tenía un <b>20 %</b> de éxito (reservar una clase: 80 %). Los usuarios confundían «entrenador» con «monitor» y no recordaban los nombres, así que reorganicé la navegación en torno a actividades y citas, añadí fotos de los entrenadores y una lista de espera para las clases llenas.",
+ke_note:"Algunas pantallas se han omitido por confidencialidad.",
+cm_tag:"Caso de estudio UX",cm_meta:"Diseño centrado en el usuario · de la investigación al prototipo",
+cm_problem:"No había una forma sencilla de encontrar cafeterías según lo que te importa (de especialidad, ecológicas, que admitan mascotas, sin gluten) y pedir o reservar sin colas.",
+cm_process:"Investigación y benchmarking → arquetipos → storyboard → MVP en dos fases → card sorting (10 participantes) → arquitectura de información antes/después → wireframes → pruebas de usabilidad en castellano e inglés → evaluación heurística → UI kit.",
+cm_outcome:"Un prototipo interactivo en alta fidelidad en Figma.",
+cm_insight:"<b>Los datos cambiaron el diseño:</b> 7 de cada 10 participantes agruparon «comodidades» y «descripción» dentro de «Buscar cafetería», así que rehíce la arquitectura de información en torno a la búsqueda.",
+cm_btn:"Abrir el prototipo en Figma ↗",
+ea_tag:"Estrategia de producto",ea_meta:"Formación de Product Owner · del descubrimiento al modelo de negocio",
+ea_problem:"La comunicación entre familias y escuelas es lenta y dispersa: notas en papel, grupos de WhatsApp, reuniones con tutores difíciles de concertar.",
+ea_research:"Arquetipos (una madre muy ocupada, un abuelo que cuida a sus nietos), customer journeys, historias de usuario, una encuesta propia y un análisis de la competencia.",
+ea_strategy:"Tamaño de mercado (TAM 34.168 → SAM 21.000 → SOM 6.765 escuelas), backlog de producto, KPI, OKR, roadmap, propuesta única de valor y Business Model Canvas.",
+ea_insight:"El <b>96 %</b> de las familias encuestadas ve necesaria una app para seguir las actividades escolares de sus hijos. El MVP se centró en lo que más pedían: un calendario de actividades y un chat directo con los tutores.",
+g_h:"Juegos educativos, co-diseñados con mi hijo",g_p:"Mi investigación con usuarios favorita: un niño de 7 años al que le encantan los trenes y que te dice exactamente lo que piensa.",
+g_story_h:"Un problema en casa, resuelto como un producto",
+g_story_p1:"Mi hijo tenía que aprender las religiones del mundo para el cole y no lograba memorizarlas. Le encantan los trenes — quiere ser maquinista y se sabía las estaciones antes de aprender a leer. Así que le hice un juego de trenes.",
+g_quote:"«¿Me creas algo más?»",
+g_story_p2:"Después de jugarlo muchas veces, el tema le resultó fácil. Entonces pidió más — y en el juego de inglés se convirtió en mi co-diseñador: me pedía que fuera más difícil.",
+g_t1:"Entender al usuario",g_t1d:"Motivación: los trenes. Dificultad: memorizar listas abstractas.",
+g_t2:"Prototipar",g_t2d:"El Tren de les Religions: un cuestionario en el que el tren avanza con cada acierto.",
+g_t3:"Iterar con su feedback",g_t3d:"Una mecánica nueva para el mismo contenido: Carrega els Vagons.",
+g_t4:"Co-diseñar",g_t4d:"English Fun: pidió dictados, menos pistas y perder estrellas con los errores.",
+g1_p:"Cuestionario en catalán: cada acierto hace avanzar el tren hasta la siguiente estación.",g1_a:"Modo repaso con una tabla",g1_b:"Funciona con el dedo y con el teclado",
+g2_p:"Arrastrar y soltar: carga cada caja en el tren correcto.",g2_a:"Segunda mecánica, mismo objetivo",g2_b:"Pensado para el móvil, modo claro y oscuro",
+g3_p:"El abecedario y contar de diez en diez para 3.º de primaria, con pronunciación británica.",g3_a:"Juegos de unir, dictados y comprensión oral",g3_b:"Dificultad ajustada con su feedback",
+play:"Jugar ↗",
+g_built:"<b>Diseñados por mí, creados con IA.</b> Gratis — ¡pruébalos!",
+s_h:"Proyectos paralelos",s_p:"Productos más pequeños que hago para probar ideas rápido.",
+s1_status:"Prototipo en línea · se actualiza cada día",s1_h:"Qué hacemos en Mataró",
+s1_p:"Todos los planes de mi ciudad en un solo sitio — teatro, música, fiestas y actividades en familia — en catalán, castellano, inglés y francés. Un pequeño script de Python lee cada mañana las agendas públicas y GitHub Actions publica la actualización automáticamente, siempre enlazando a la fuente original.",
+s1_btn:"Abrir el prototipo ↗",ai_built:"Hecho con <b>Claude</b> · Python · GitHub Actions",
+s2_status:"En curso",s2_p:"Una app de eventos en familia y salidas en tren para niños a los que les encantan los trenes (como el mío). Ahora definiendo funcionalidades y un modelo de negocio basado en merchandising.",
+a_h:"Sobre mí",
+a_p1:"Soy Product Owner y diseñadora UX y vivo en Mataró (Barcelona). Durante casi 14 años trabajé en operaciones y logística internacional, donde aprendí a mapear procesos, coordinar equipos de varios países y resolver lo que frena a las personas.",
+a_p2:"Me formé en UX, obtuve el certificado Google UX Design y lideré el diseño y el backlog de una app de fitness. Hoy uso la IA para pasar rápido de la idea al prototipo funcional, y me importan los productos accesibles y multilingües que no dejan a nadie atrás.",
+a_langs:"Idiomas",lv_native:"Nativa",lv_bilingual:"Bilingüe",lv_pro:"Profesional completo · Licenciatura en Traducción",lv_pro2:"Profesional",
+a_xp:"Experiencia",xp1:"Design Lead y Product Owner",xp2:"Operaciones y logística internacional",xp3:"Analista de compras SAP",
+a_edu:"Formación",edu1:"Certificado Google UX Design",edu2:"Licenciatura en Traducción",edu2d:"Inglés · francés · español",
+a_skills:"Competencias",sk1:"Backlog de producto e historias de usuario",sk2:"Investigación con usuarios y pruebas",sk3:"Prototipado",sk4:"KPI y OKR",sk5:"Localización",sk6:"Prototipado con IA (Claude, Lovable)",sk7:"Mejora de procesos",
+c_h:"<em>Hablemos</em>",c_p:"Busco un puesto de Product Owner, Product Manager o Product Operations en una empresa tecnológica — en remoto o en Barcelona.",c_btn:"Escríbeme",
+hero_eyebrow:"Product Owner & Product Ops · Community Builder",chip5:"Certificada en <b>Scrum</b>",nav_comm:"Comunidad",
+cm_meta:"Coderhouse · UX/UI Design Advanced · 2021–2022",ea_meta:"Coderhouse · Formación de Product Manager · 2022",
+ke_role:"Product UX/UI Lead y Product Owner: lideré el descubrimiento y la entrega, definí el roadmap, prioricé el backlog y los criterios de aceptación, y facilité sprint plannings, reviews y retros con diseño, desarrollo y negocio.",
+a_p2:"Estoy certificada en Scrum y me formé en UX en Coderhouse y Google. Lideré el producto y el diseño de una app de fitness, y también trabajo en evaluación de calidad de IA, aplicando guías de valoración para juzgar la relevancia y la intención del usuario. Hoy uso la IA para pasar rápido de la idea al prototipo, y me importan los productos accesibles y multilingües que no dejan a nadie atrás.",
+com_h:"Comunidad y liderazgo",com_p:"Desde 2022 construyo comunidades tecnológicas, organizo eventos y doy formación — sobre todo para que más mujeres entren en el mundo del producto y la IA.",
+co1:"Organizadora voluntaria: eventos tecnológicos sobre diversidad e inclusión, formaciones de producto, IA y competencias digitales para mujeres, y alianzas con instituciones y empresas.",
+co2:"Product Community Lead voluntaria en una de las mayores comunidades de desarrolladores de Google: ponentes, partners, organizadores y crecimiento de la comunidad.",
+co3:"Product Manager (voluntaria) de una iniciativa de Design Systems: estructura y gobernanza, y alineación de producto, diseño e ingeniería en torno a estándares comunes.",
+co4:"Mentora en un programa de código abierto sobre tecnologías inmersivas y geoespaciales: escucha activa, orientación y feedback estructurado.",
+co5:"Taller que imparto: «Eines digitals per crear contingut visual» — Canva y Adobe Express para mujeres que se inician en la tecnología.",
+
+xp0:"Product Manager · Design Systems",xp0d:"SheHub · 2026 · voluntariado",xp2d:"Arquetypo · 2011–2024 · −12 % de costes operativos gracias a la optimización de procesos, KPI y dashboards",
+edu2:"Licenciatura en Traducción (francés · inglés · español)",edu2d:"Universidad Central de Venezuela · 1998–2004",edu3:"Posgrado en Comercio Exterior",edu4:"Traductora e intérprete",
+a_edu:"Formación",a_cert:"Certificaciones",cert1:"Certificada",cert2:"Google · Coursera",
+footer:"© 2026 Rosemarie García López · Diseñado por mí, creado con IA"}
+};
+const TITLES={en:"Rosemarie García · Product Owner & Product Ops",fr:"Rosemarie García · Product Owner & Product Ops",ca:"Rosemarie García · Product Owner i Product Ops",es:"Rosemarie García · Product Owner y Product Ops"};
+function setLang(l){
+  if(!T[l]) l="en";
+  document.documentElement.lang=l;
+  document.querySelectorAll("[data-i]").forEach(el=>{const v=T[l][el.dataset.i]; if(v!==undefined) el.innerHTML=v;});
+  document.querySelectorAll(".langs button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
+  document.title=TITLES[l];
+  try{localStorage.setItem("rg-lang",l)}catch(e){}
+}
+document.querySelectorAll(".langs button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.l)));
+let start="en";
+try{start=localStorage.getItem("rg-lang")||(["fr","ca","es"].find(x=>(navigator.language||"").startsWith(x))||"en")}catch(e){}
+setLang(start);
+</script>
+</body>
+</html>
